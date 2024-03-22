@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Recipe App</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<h4 class="title">Recipe App</h4>
+				<div class="input">
+					<input type="text" id="dish-input" placeholder="Enter the dish you want" />
+					<button id="get-recipes-btn">Get Ingredients</button>
+				</div>
+			</header>
+
+			<main class="wrapper">
+				<section id="content">
+					<div id="ingredients-list"></div>
+				</section>
+				<section class="instruction-container">
+					<button id="get-instructions-btn" class="get-recipe-button">Get Recipe</button>
+					<div class="output">
+						<ol id="instructions"></ol>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<p>
+					Developed by:
+					<a href="https://github.com/MNUCS2024">Team G1@MNUCS2024</a>
+				</p>
+			</footer>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "6828d500-613f-4a11-8c38-865fa0fec5b1",
+		"name": "spoonacular API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29490261",
+		"_collection_link": "https://mnucs2024g1.postman.co/workspace/Team-Workspace~21313bc7-2ead-4b23-8497-3aba06defcd4/collection/29490261-6828d500-613f-4a11-8c38-865fa0fec5b1?action=share&source=collection_link&creator=29490261"
+	},
+	"item": [
+		{
+			"name": "Recipes",
+			"item": [
+				{
+					"name": "searchRecipe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{searchRecipeUrl}}?query=pasta&apiKey={{token}}",
+							"host": [
+								"{{searchRecipeUrl}}"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "pasta"
+								},
+								{
+									"key": "maxFat",
+									"value": "25",
+									"disabled": true
+								},
+								{
+									"key": "number",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredients",
+			"item": [
+				{
+					"name": "searchIngredients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{searchIngredeintUrl}}?query=banana&number=2&sort=calories&sortDirection=desc&apiKey={{token}}",
+							"host": [
+								"{{searchIngredeintUrl}}"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "banana"
+								},
+								{
+									"key": "number",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "calories"
+								},
+								{
+									"key": "sortDirection",
+									"value": "desc"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "searchGroceryProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{searchGroceryProductUrl}}?query=pizza&number=2&apiKey={{token}}",
+							"host": [
+								"{{searchGroceryProductUrl}}"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "pizza"
+								},
+								{
+									"key": "number",
+									"value": "2"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MenuItems",
+			"item": [
+				{
+					"name": "searchMenuItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{searchMenuItemUrl}}?query=burger&number=2&apiKey={{token}}",
+							"host": [
+								"{{searchMenuItemUrl}}"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "burger"
+								},
+								{
+									"key": "number",
+									"value": "2"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MealPlanning",
+			"item": [
+				{
+					"name": "mealPlanner",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "searchRestaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{searchRestauranUrl}}?cuisine=italian&lat=37.78129959&lng=-122.38869477&apiKey={{token}}",
+							"host": [
+								"{{searchRestauranUrl}}"
+							],
+							"query": [
+								{
+									"key": "cuisine",
+									"value": "italian"
+								},
+								{
+									"key": "lat",
+									"value": "37.78129959"
+								},
+								{
+									"key": "lng",
+									"value": "-122.38869477"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wine",
+			"item": [
+				{
+					"name": "wineGuide",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "dishPairingForWine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wineUrl}}/dishes?wine=malbec&apiKey={{token}}",
+							"host": [
+								"{{wineUrl}}"
+							],
+							"path": [
+								"dishes"
+							],
+							"query": [
+								{
+									"key": "wine",
+									"value": "malbec"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "winePairing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wineUrl}}/pairing?food=steak&apiKey={{token}}",
+							"host": [
+								"{{wineUrl}}"
+							],
+							"path": [
+								"pairing"
+							],
+							"query": [
+								{
+									"key": "food",
+									"value": "steak"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wineDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wineUrl}}/description?wine=merlot&apiKey={{token}}",
+							"host": [
+								"{{wineUrl}}"
+							],
+							"path": [
+								"description"
+							],
+							"query": [
+								{
+									"key": "wine",
+									"value": "merlot"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "wineRecomendation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wineUrl}}/recommendation?wine=merlot&number=2&apiKey={{token}}",
+							"host": [
+								"{{wineUrl}}"
+							],
+							"path": [
+								"recommendation"
+							],
+							"query": [
+								{
+									"key": "wine",
+									"value": "merlot"
+								},
+								{
+									"key": "number",
+									"value": "2"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Misc",
+			"item": [
+				{
+					"name": "searchAllFood",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{searchAllFoodUrl}}?query=apple&number=2&apiKey={{token}}",
+							"host": [
+								"{{searchAllFoodUrl}}"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "apple"
+								},
+								{
+									"key": "number",
+									"value": "2"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "searchRecipeUrl",
+			"value": "https://api.spoonacular.com/recipes/complexSearch",
+			"type": "string"
+		},
+		{
+			"key": "searchIngredeintUrl",
+			"value": "https://api.spoonacular.com/food/ingredients/search",
+			"type": "string"
+		},
+		{
+			"key": "searchGroceryProductUrl",
+			"value": "https://api.spoonacular.com/food/products/search",
+			"type": "string"
+		},
+		{
+			"key": "searchMenuItems",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "searchMenuItemUrl",
+			"value": "https://api.spoonacular.com/food/menuItems/search",
+			"type": "string"
+		},
+		{
+			"key": "searchRestauranUrl",
+			"value": "https://api.spoonacular.com/food/restaurants/search",
+			"type": "string"
+		},
+		{
+			"key": "wineUrl",
+			"value": "https://api.spoonacular.com/food/wine",
+			"type": "string"
+		},
+		{
+			"key": "searchAllFoodUrl",
+			"value": "https://api.spoonacular.com/food/search",
+			"type": "string"
+		}
+	]
+}

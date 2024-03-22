@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Recipe App</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="title">
+					<h4>Recipe App</h4>
+				</div>
+				<div class="input">
+					<input type="text" id="dish-input" placeholder="Enter the dish you want" />
+					<button onclick="getRecipes()">Get Ingredients</button>
+				</div>
+			</div>
+
+			<div class="wrapper">
+				<div id="content">
+					<div id="ingredients-list"></div>
+					<button onclick="getInstructions()">Get Recipe</button>
+					<div id="instructions"></div>
+				</div>
+				<div class="content">
+					<div class="output">
+						<div class="recipe">
+							<h2>Recipe</h2>
+							<p id="recipe"></p>
+						</div>
+						<div class="image">
+							<img id="recipeImage" src="" alt="Recipe Image" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<p>
+					Developed by:
+					<a href="https://github.com/MNUCS2024">Team G1@MNUCS2024</a>
+				</p>
+			</div>
+		</div>
+
+		<script>
+			function getRecipes() {
+				const dish = document.getElementById("dish-input").value;
+
+				fetch(`/recipes/${dish}`)
+					.then((response) => response.json())
+					.then((data) => {
+						document.getElementById("ingredients-list").textContent =
+							JSON.stringify(data);
+					})
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			}
+
+			function getInstructions() {
+				const dish = document.getElementById("dish-input").value;
+
+				fetch(`/instructions/${dish}`)
+					.then((response) => response.json())
+					.then((data) => {
+						document.getElementById("instructions").textContent = JSON.stringify(data);
+					})
+					.catch((error) => {
+						console.error("Error:", error);
+					});
+			}
+		</script>
+	</body>
+</html>

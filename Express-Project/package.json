@@ -1,0 +1,22 @@
+{
+  "name": "recipe-app",
+  "version": "1.0.0",
+  "description": "Recipe Finder Web App",
+  "main": "App.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
+  },
+  "keywords": [
+    "Recipe",
+    "App"
+  ],
+  "author": "G1@MNUCS2024",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.1",
+    "node-fetch": "^3.3.2"
+  }
+}
